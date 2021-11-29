@@ -56,14 +56,14 @@ a {
 
 ul,
 a:hover {
-  color: #ffd000;
+  color: #c78a13;
   transition: all ease 0.3s;
 }
 
 a.btn {
   padding: 17px 30px;
   font-weight: bold;
-  background-color: #ffd000;
+  background-color: #c78a13;
   color: white;
   border: none;
   outline: 0;

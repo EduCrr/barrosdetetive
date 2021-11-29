@@ -12,6 +12,9 @@ export const HomeArea = styled.main`
       flex: 1;
       margin: auto;
       img {
+        filter: brightness(80%);
+        -webkit-filter: brightness(80%);
+        -moz-filter: brightness(80%);
         width: auto;
         height: 550px;
         border-radius: 15px 50px 30px;
@@ -41,9 +44,7 @@ export const HomeArea = styled.main`
     width: 100%;
     transform: scale(0.9);
     transition: all ease 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     p {
       color: #b2b2b1;
@@ -53,7 +54,18 @@ export const HomeArea = styled.main`
     &:hover {
       transform: scale(1);
     }
+    i {
+      color: #c78a13;
+    }
+    .areaSlider {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
+
   .services {
     margin: 5rem auto;
     .alice-carousel .alice-carousel__next-btn-item,
@@ -94,6 +106,26 @@ export const HomeArea = styled.main`
       width: 550px;
       h2 {
         margin-bottom: 20px;
+      }
+    }
+  }
+  .backgroundCity {
+    margin-top: 5rem;
+    .featuredVertical {
+      width: inherit;
+      height: inherit;
+      background: linear-gradient(to right, #191919 20%, transparent 98%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      .textInside {
+        max-width: 500px;
+
+        h2 {
+          margin-bottom: 20px;
+        }
       }
     }
   }

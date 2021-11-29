@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import { HomeArea } from "./styled";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
 import Stars from "@material-ui/icons/Stars";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function Home() {
-  const handleDragStart = (e) => e.preventDefault();
   const [sliderInfo, setSliderInfo] = useState([
+    {
+      title: "Rastreador",
+      icon: <Stars />,
+      descripton:
+        " Lorem ipsum dolor sit am rem ipsum dolor sit amet,  consectetur consectetur consectetur adipiscing elit,",
+    },
+    {
+      title: "Casos de traição",
+      icon: <Stars />,
+      descripton: " Lorem ipsum dolor sit amet,  nsectetur adipiscing elit,",
+    },
+    {
+      title: "Casos de traição",
+      icon: <Stars />,
+      descripton: " Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+    },
     {
       title: "Rastreador",
       icon: <Stars />,
@@ -16,7 +31,7 @@ export default function Home() {
       title: "Casos de traição",
       icon: <Stars />,
       descripton:
-        " Lorem ipsum dolor sit amet,   aliquip ex ea commodo consequat. consectetur adipiscing elit,",
+        " Lorem ipsum dolor sit amet,   aliquip ex ea commodo con elit,",
     },
     {
       title: "Casos de traição",
@@ -24,20 +39,38 @@ export default function Home() {
       descripton: " Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
     },
   ]);
-  const items = sliderInfo.map((item, k) => (
-    <div className="infoSlider" key={k}>
-      <div className="areaSlider">
-        <i>{item.icon}</i>
-        <h3>{item.title}</h3>
-        <p>{item.descripton}</p>
-      </div>
-    </div>
-  ));
-
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 },
+  let settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -59,13 +92,19 @@ export default function Home() {
       </section>
       <section className="services">
         <h2>Serviços</h2>
-        <AliceCarousel
-          mouseTracking
-          items={items}
-          disableDotsControls={true}
-          responsive={responsive}
-          controlsStrategy="alternate"
-        />
+        <Slider {...settings}>
+          {sliderInfo.map((item, k) => (
+            <div className="infoSlider" key={k}>
+              <div className="areaSlider">
+                <i>
+                  <Stars />
+                </i>
+                <h3>{item.title}</h3>
+                <p>{item.descripton}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </section>
       <section className="servicesFinal">
         <div className="sessionOne">
@@ -108,6 +147,30 @@ export default function Home() {
           </div>
           <div className="ServicePhoto">
             <img alt="" src="/assets/sigilo.jpg" />
+          </div>
+        </div>
+      </section>
+      <section
+        style={{
+          backgroundSize: "cover",
+          backgroundPosition: "top",
+          height: "80vh",
+          width: "100%",
+          top: "0",
+          backgroundImage: `url('/assets/background.jpg')`,
+          objectFit: "cover",
+        }}
+        className="backgroundCity"
+      >
+        <div className="featuredVertical">
+          <div className="textInside">
+            <h2>Sigilo Absoluto</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
           </div>
         </div>
       </section>

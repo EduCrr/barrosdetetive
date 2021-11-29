@@ -3,7 +3,16 @@ import styled from "styled-components";
 export const HomeArea = styled.main`
   max-width: 1200px;
   margin: 4rem auto;
-
+  @media (max-width: 1024px) {
+    max-width: 1000px;
+    overflow-x: hidden;
+    .about,
+    .sessionOne,
+    .sessionTwo {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
   .about {
     display: flex;
     justify-content: space-between;
@@ -12,7 +21,6 @@ export const HomeArea = styled.main`
       flex: 1;
       margin: auto;
       img {
-        filter: brightness(80%);
         -webkit-filter: brightness(80%);
         -moz-filter: brightness(80%);
         width: auto;
@@ -68,16 +76,7 @@ export const HomeArea = styled.main`
 
   .services {
     margin: 5rem auto;
-    .alice-carousel .alice-carousel__next-btn-item,
-    .alice-carousel__prev-btn-item {
-      background-color: #ffd000;
-      padding: 20px;
-      border-radius: 5px 25px 15px;
-      span {
-        color: white !important;
-        font-size: 20px;
-      }
-    }
+
     h2 {
       text-align: center;
     }
@@ -92,6 +91,7 @@ export const HomeArea = styled.main`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      overflow-x: hidden;
     }
     .ServicePhoto {
       img {
@@ -128,5 +128,41 @@ export const HomeArea = styled.main`
         }
       }
     }
+  }
+  @media (max-width: 980px) {
+    .about {
+      text-align: center;
+      flex-direction: column;
+      .aboutDesc {
+        width: 90%;
+        margin-top: 4rem;
+      }
+      a {
+        margin: auto;
+        margin-top: 20px;
+      }
+    }
+    .sessionOne,
+    .sessionTwo {
+      flex-direction: column;
+    }
+    .sessionTwo {
+      .ServiceDesc {
+        order: 1;
+      }
+      .ServicePhoto {
+        order: 2;
+      }
+    }
+    .ServiceDesc {
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+      text-align: center;
+      width: 90% !important;
+    }
+  }
+  .textInside {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 `;

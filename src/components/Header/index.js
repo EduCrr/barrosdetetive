@@ -6,6 +6,7 @@ export default function Header() {
     { title: "Serviços Investigativos", img: "/assets/capa1.jpg" },
     { title: "Serviços Investigativos", img: "/assets/capa2.jpg" },
   ]);
+  const [menuBackground, setMenuBackground] = useState(false);
   const [photo, setPhoto] = useState({});
 
   useEffect(() => {
@@ -14,27 +15,52 @@ export default function Header() {
     setPhoto(chose);
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 30) {
+        setMenuBackground(true);
+      } else {
+        setMenuBackground(false);
+      }
+    };
+    window.addEventListener("scroll", scrollListener);
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
   return (
     <>
-      <HeaderArea>
-        <h1>Barros</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">Sobre</Link>
-            </li>
-            <li>
-              <Link to="/">Serviços</Link>
-            </li>
-            <li>
-              <Link to="/">Contato</Link>
-            </li>
-          </ul>
-        </nav>
-      </HeaderArea>
+      <div
+        style={{
+          background: menuBackground ? "#191919" : "transparent",
+          height: menuBackground ? "70px" : "0px",
+          width: menuBackground ? "100%" : "0px",
+          position: menuBackground ? "fixed" : "none",
+          zIndex: menuBackground ? "999" : "0",
+          transition: "all ease 0.4s",
+        }}
+      >
+        <HeaderArea black={menuBackground}>
+          <h1>Barros</h1>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">Sobre</Link>
+              </li>
+              <li>
+                <Link to="/">Serviços</Link>
+              </li>
+              <li>
+                <Link to="/">Contato</Link>
+              </li>
+            </ul>
+          </nav>
+        </HeaderArea>
+      </div>
+
       <Featured
         style={{
           backgroundSize: "cover",

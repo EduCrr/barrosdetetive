@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FooterArea } from "./styled";
 import WhatsApp from "@material-ui/icons/WhatsApp";
 import Email from "@material-ui/icons/Email";
-
+import "slick-carousel/slick/slick-theme.css";
+import Fade from "react-reveal/Fade";
 export default function Footer() {
   return (
     <FooterArea>
@@ -30,7 +31,9 @@ export default function Footer() {
         </form>
       </div>
       <div className="rightSide">
-        <img src="/assets/contato.jpg" />
+        <Fade right cascade>
+          <img src="/assets/contato.jpg" />
+        </Fade>
       </div>
     </FooterArea>
   );

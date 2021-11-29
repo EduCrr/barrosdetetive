@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderArea = styled.header`
   max-width: 1200px;
-  margin: 30px auto;
+  margin: ${(props) => (props.black ? "15px auto" : "30px auto")};
   height: 50px;
   display: flex;
   align-items: center;
@@ -12,6 +12,11 @@ export const HeaderArea = styled.header`
   top: 0;
   left: 0;
   right: 0;
+  transition: all ease 0.4s;
+
+  @media (max-width: 1024px) {
+    max-width: 1000px;
+  }
 `;
 
 export const Featured = styled.div`

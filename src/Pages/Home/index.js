@@ -4,6 +4,7 @@ import Stars from "@material-ui/icons/Stars";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Fade from "react-reveal/Fade";
 export default function Home() {
   const [sliderInfo, setSliderInfo] = useState([
     {
@@ -43,13 +44,14 @@ export default function Home() {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
+          arrows: false,
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
@@ -76,19 +78,21 @@ export default function Home() {
   return (
     <HomeArea>
       <section className="about">
-        <div className="aboutPhoto">
-          <img alt="" src="/assets/about2.jpg" />
-        </div>
-        <div className="aboutDesc">
-          <h2>Sobre Nós</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <a className="btn">Fale Conosco</a>
-        </div>
+        <Fade left cascade>
+          <div className="aboutPhoto">
+            <img alt="" src="/assets/about.jpg" />
+          </div>
+          <div className="aboutDesc">
+            <h2>Sobre Nós</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a className="btn">Fale Conosco</a>
+          </div>
+        </Fade>
       </section>
       <section className="services">
         <h2>Serviços</h2>
@@ -108,46 +112,52 @@ export default function Home() {
       </section>
       <section className="servicesFinal">
         <div className="sessionOne">
-          <div className="ServiceDesc">
-            <h2>Experiência & Segurança</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div className="ServicePhoto">
-            <img alt="" src="/assets/experiencia.jpg" />
-          </div>
+          <Fade left cascade>
+            <div className="ServiceDesc">
+              <h2>Experiência & Segurança</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div className="ServicePhoto">
+              <img alt="" src="/assets/experiencia.jpg" />
+            </div>
+          </Fade>
         </div>
         <div className="sessionTwo">
-          <div className="ServicePhoto">
-            <img alt="" src="/assets/resultado.jpg" />
-          </div>
-          <div className="ServiceDesc">
-            <h2>Resultados Rápidos</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
+          <Fade right cascade>
+            <div className="ServicePhoto">
+              <img alt="" src="/assets/resultado.jpg" />
+            </div>
+            <div className="ServiceDesc">
+              <h2>Resultados Rápidos</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </Fade>
         </div>
         <div className="sessionOne">
-          <div className="ServiceDesc">
-            <h2>Sigilo Absoluto</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div className="ServicePhoto">
-            <img alt="" src="/assets/sigilo.jpg" />
-          </div>
+          <Fade left cascade>
+            <div className="ServiceDesc">
+              <h2>Sigilo Absoluto</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div className="ServicePhoto">
+              <img alt="" src="/assets/sigilo.jpg" />
+            </div>
+          </Fade>
         </div>
       </section>
       <section
@@ -163,15 +173,17 @@ export default function Home() {
         className="backgroundCity"
       >
         <div className="featuredVertical">
-          <div className="textInside">
-            <h2>Sigilo Absoluto</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
+          <Fade left cascade>
+            <div className="textInside">
+              <h2>Sigilo Absoluto</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </Fade>
         </div>
       </section>
     </HomeArea>

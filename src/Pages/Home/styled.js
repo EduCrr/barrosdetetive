@@ -6,12 +6,6 @@ export const HomeArea = styled.main`
   @media (max-width: 1024px) {
     max-width: 1000px;
     overflow-x: hidden;
-    .about,
-    .sessionOne,
-    .sessionTwo {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
   }
   .about {
     display: flex;
@@ -160,9 +154,19 @@ export const HomeArea = styled.main`
       text-align: center;
       width: 90% !important;
     }
+    .textInside {
+      margin: auto;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center;
+    }
   }
-  .textInside {
-    padding-left: 20px;
-    padding-right: 20px;
+
+  @media (max-width: 375px) {
+    .ServicePhoto {
+      img {
+        width: 100%;
+      }
+    }
   }
 `;

@@ -5,6 +5,7 @@ export const FooterArea = styled.footer`
   margin: 5rem auto;
   display: flex;
   justify-content: space-between;
+
   .leftSide {
     h2 {
       margin-bottom: 20px;
@@ -56,6 +57,7 @@ export const FooterArea = styled.footer`
       border-radius: 15px 50px 30px;
     }
   }
+
   @media (max-width: 1024px) {
     max-width: 1000px;
     padding-left: 20px;
@@ -74,6 +76,19 @@ export const FooterArea = styled.footer`
     }
     .rightSide {
       margin: 20px auto;
+    }
+  }
+  @media (max-width: 375px) {
+    .icon {
+      flex-direction: column;
+    }
+    span {
+      margin-bottom: 20px;
+    }
+    .rightSide {
+      img {
+        width: 100%;
+      }
     }
   }
 `;

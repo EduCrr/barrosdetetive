@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HeaderArea, Featured } from "./styled";
+import Menu from "@material-ui/icons/Menu";
 export default function Header() {
   const [capa, setCapa] = useState([
     { title: "Serviços Investigativos", img: "/assets/capa1.jpg" },
@@ -8,6 +9,7 @@ export default function Header() {
   ]);
   const [menuBackground, setMenuBackground] = useState(false);
   const [photo, setPhoto] = useState({});
+  const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
     const randomCapa = Math.floor(Math.random() * capa.length);
@@ -28,9 +30,14 @@ export default function Header() {
       window.removeEventListener("scroll", scrollListener);
     };
   }, []);
+  function handleMenu() {
+    setOpenMenu(!openMenu);
+    console.log("a");
+  }
   return (
     <>
       <div
+        className="menuBackground"
         style={{
           background: menuBackground ? "#191919" : "transparent",
           height: menuBackground ? "70px" : "0px",
@@ -40,10 +47,10 @@ export default function Header() {
           transition: "all ease 0.4s",
         }}
       >
-        <HeaderArea black={menuBackground}>
+        <HeaderArea open={openMenu} black={menuBackground}>
           <h1>Barros</h1>
           <nav>
-            <ul>
+            <ul onClick={() => setOpenMenu(false)}>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -58,6 +65,9 @@ export default function Header() {
               </li>
             </ul>
           </nav>
+          <div className="menu">
+            <Menu onClick={handleMenu} />
+          </div>
         </HeaderArea>
       </div>
 

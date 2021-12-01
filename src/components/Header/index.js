@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { HeaderArea, Featured } from "./styled";
 import Menu from "@material-ui/icons/Menu";
 export default function Header() {
@@ -36,6 +35,7 @@ export default function Header() {
   }
   return (
     <>
+      <div id="home"></div>
       <div
         className="menuBackground"
         style={{
@@ -52,16 +52,16 @@ export default function Header() {
           <nav>
             <ul onClick={() => setOpenMenu(false)}>
               <li>
-                <Link to="/">Home</Link>
+                <a href="#home">Home</a>
               </li>
               <li>
-                <Link to="/">Sobre</Link>
+                <a href="#sobre">Sobre</a>
               </li>
               <li>
-                <Link to="/">Serviços</Link>
+                <a href="#servico">Serviços</a>
               </li>
               <li>
-                <Link to="/">Contato</Link>
+                <a href="#contato">Contato</a>
               </li>
             </ul>
           </nav>
@@ -84,7 +84,7 @@ export default function Header() {
         <div className="featuredVertical">
           <p>Detetive Particular</p>
           <h1>{photo.title}</h1>
-          <p>Bahia/BH</p>
+          <p>Bahia/BA</p>
         </div>
       </Featured>
     </>

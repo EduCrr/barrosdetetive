@@ -52,9 +52,9 @@ export const FooterArea = styled.footer`
       width: 375px;
       height: 550px;
       object-fit: cover;
-      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
-        0 15px 12px rgba(0, 0, 0, 0.22);
       border-radius: 15px 50px 30px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
     }
   }
 

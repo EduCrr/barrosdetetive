@@ -15,8 +15,6 @@ export const HomeArea = styled.main`
       flex: 1;
       margin: auto;
       img {
-        -webkit-filter: brightness(80%);
-        -moz-filter: brightness(80%);
         width: auto;
         height: 550px;
         border-radius: 15px 50px 30px;
@@ -91,9 +89,9 @@ export const HomeArea = styled.main`
       img {
         width: auto;
         height: 550px;
-        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
-          0 15px 12px rgba(0, 0, 0, 0.22);
         border-radius: 15px 50px 30px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
       }
     }
     .ServiceDesc {

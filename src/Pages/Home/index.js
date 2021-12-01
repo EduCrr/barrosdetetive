@@ -79,32 +79,35 @@ export default function Home() {
     <HomeArea>
       <section className="about">
         <Fade left cascade>
-          <div className="aboutPhoto">
+          <div id="sobre" className="aboutPhoto">
             <img alt="" src="/assets/about.jpg" />
           </div>
           <div className="aboutDesc">
             <h2>Sobre Nós</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Serviços de Investigação Particular nas cidades de: Luis Eduardo
+              Magalhães/BA, Barreiras na Regiao oeste da Bahia e incluindo Irecê
+              e região.
             </p>
-            <a className="btn">Fale Conosco</a>
+            <a className="btn" href="#contato">
+              Fale Conosco
+            </a>
           </div>
         </Fade>
       </section>
       <section className="services">
-        <h2>Serviços</h2>
+        <h2 id="servico">Serviços</h2>
         <Slider {...settings}>
           {sliderInfo.map((item, k) => (
             <div className="infoSlider" key={k}>
               <div className="areaSlider">
-                <i>
-                  <Stars />
-                </i>
-                <h3>{item.title}</h3>
-                <p>{item.descripton}</p>
+                <Fade left cascade>
+                  <i>
+                    <Stars />
+                  </i>
+                  <h3>{item.title}</h3>
+                  <p>{item.descripton}</p>
+                </Fade>
               </div>
             </div>
           ))}
@@ -116,10 +119,10 @@ export default function Home() {
             <div className="ServiceDesc">
               <h2>Experiência & Segurança</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Por que devo contratar os serviços do Detetive Barros? Porque
+                temos uma equipe com anos de proficiência nos serviços
+                investigativos, e temos o maior prazer em entregar um trabalho
+                de qualidade, segurança para nossos clientes.
               </p>
             </div>
             <div className="ServicePhoto">
@@ -135,10 +138,9 @@ export default function Home() {
             <div className="ServiceDesc">
               <h2>Resultados Rápidos</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Atenção aos detalhes faz a diferença em nosso trabalho, mas
+                queremos também entregar os resultados de forma ágil e segura
+                para nossos clientes.
               </p>
             </div>
           </Fade>
@@ -148,10 +150,9 @@ export default function Home() {
             <div className="ServiceDesc">
               <h2>Sigilo Absoluto</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Nosso trabalho é realizado com total sigilo absoluto, mantendo a
+                confiança de nossos clientes e honestidade em cada caso
+                realizado.
               </p>
             </div>
             <div className="ServicePhoto">
@@ -175,12 +176,12 @@ export default function Home() {
         <div className="featuredVertical">
           <Fade left cascade>
             <div className="textInside">
-              <h2>Sigilo Absoluto</h2>
+              <h2>Detetive Barros</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                O Detetive Particular Barros está preparado para desvendar às
+                suas dúvidas tais como: traição, desvios de mercadorias, dossiê
+                de pessoas tanto físicas como jurídicas e etc. Com ética e
+                seriedade, priorizo pela resolução do seu problema.
               </p>
             </div>
           </Fade>

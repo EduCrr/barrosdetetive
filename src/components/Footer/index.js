@@ -8,7 +8,7 @@ export default function Footer() {
   let ano = new Date();
   return (
     <>
-      <FooterArea>
+      <FooterArea id="contato">
         <div className="leftSide">
           <h2>Entre em contato</h2>
 

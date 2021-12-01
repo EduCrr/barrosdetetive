@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: all ease 0.5s;
+}
 html ::-webkit-scrollbar {
   scroll-behavior: smooth;
   scrollbar-width: thin;

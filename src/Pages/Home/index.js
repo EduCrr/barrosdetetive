@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { HomeArea } from "./styled";
-import Stars from "@material-ui/icons/Stars";
+import DirectionsCar from "@material-ui/icons/DirectionsCar";
+import Room from "@material-ui/icons/Room";
+import Group from "@material-ui/icons/Group";
+import Explore from "@material-ui/icons/Explore";
+import WorkOff from "@material-ui/icons/WorkOff";
+import NotInterested from "@material-ui/icons/NotInterested";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,35 +14,35 @@ export default function Home() {
   const [sliderInfo, setSliderInfo] = useState([
     {
       title: "Rastreador",
-      icon: <Stars />,
+      icon: <Explore />,
+      descripton: "Tenha a localização do seu veículo ao vivo 24/7.",
+    },
+    {
+      title: "Casos de traição",
+      icon: <Group />,
+      descripton: "Descubra os segredos ocultos em seu relacionamento. ",
+    },
+    {
+      title: "Localização de veículos",
+      icon: <DirectionsCar />,
+      descripton: "Localização do veículo em sistema personalizado.",
+    },
+    {
+      title: "Fraudes contra o INSS",
+      icon: <NotInterested />,
       descripton:
-        " Lorem ipsum dolor sit am rem ipsum dolor sit amet,  consectetur consectetur consectetur adipiscing elit,",
+        "Trabalhamos para obter fotos e filmagens contra fraudes do INSS",
     },
     {
-      title: "Casos de traição",
-      icon: <Stars />,
-      descripton: " Lorem ipsum dolor sit amet,  nsectetur adipiscing elit,",
+      title: "Localização de pessoas",
+      icon: <Room />,
+      descripton: "Localização de pessoas em sistema personalizado.",
     },
     {
-      title: "Casos de traição",
-      icon: <Stars />,
-      descripton: " Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
-    },
-    {
-      title: "Rastreador",
-      icon: <Stars />,
-      descripton: " Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
-    },
-    {
-      title: "Casos de traição",
-      icon: <Stars />,
+      title: "Desvio de mercadorias",
+      icon: <WorkOff />,
       descripton:
-        " Lorem ipsum dolor sit amet,   aliquip ex ea commodo con elit,",
-    },
-    {
-      title: "Casos de traição",
-      icon: <Stars />,
-      descripton: " Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+        "Colaboradores desonestos podem causar severos prejuízos aos empresários.",
     },
   ]);
   let settings = {
@@ -101,10 +106,8 @@ export default function Home() {
           {sliderInfo.map((item, k) => (
             <div className="infoSlider" key={k}>
               <div className="areaSlider">
-                <Fade left cascade>
-                  <i>
-                    <Stars />
-                  </i>
+                <Fade left>
+                  <i>{item.icon}</i>
                   <h3>{item.title}</h3>
                   <p>{item.descripton}</p>
                 </Fade>

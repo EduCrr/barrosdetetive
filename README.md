@@ -4,31 +4,31 @@ Projeto em andamento.
 <br/>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/87316285/143925845-121ad4ee-bc2a-4587-89cd-3899d9cc28b6.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/87316285/144414436-a5d0561c-fd71-493e-9178-be1eb8b13b71.png" width="700px" />
 </div>
 <br/>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/87316285/143925893-1d4231ee-2b9d-4c2b-8419-425d1a73818d.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/87316285/144414502-ad153cfc-7cc5-43ee-b63a-176b42ef902c.png" width="700px" />
 </div>
 <br/>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/87316285/143925968-2546411b-5333-4695-825a-caba23e785e7.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/87316285/144414564-1b66e630-8fe0-44fb-81a3-8b18155a0f39.png" width="700px" />
 </div>
 <br/>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/87316285/143926021-0f0779eb-2976-4dfa-877e-cef783c81a83.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/87316285/144414651-c621e2a9-0140-4ba8-91e9-f798dbb46ff9.png" width="700px" />
 </div>
 <br/>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/87316285/143926069-a7ec6c41-eae9-4544-825b-7c02ae51f036.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/87316285/144414692-756487c6-df90-4555-9df7-432bc1d31c14.png" width="700px" />
 </div>
 <br/>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/87316285/143926101-efac4f3c-0d13-4ee1-af3e-dd18c095dcb6.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/87316285/144414737-04f6c17f-d22c-4dd1-a515-fe45b48d418b.png" width="700px" />
 </div>
 <br/>

@@ -1,5 +1,6 @@
 <p align="center">
-Projeto em andamento.
+http://barrosdetetive.com.br/
+  Criado em React Js
 </p>
 <br/>
 

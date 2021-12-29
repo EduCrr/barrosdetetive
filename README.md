@@ -1,7 +1,7 @@
 <p align="center">
 http://barrosdetetive.com.br/
 
-Um site institucional para classificar seus serviços prestados. A pedido do cliente, ele informou que gostaria de algo simples e direto, então resolvi criar um site intuitivo de página única com formulário de contato.
+Um site institucional para especificar seus serviços prestados. O objetivo do cliente era criar um site intuitivo de página única com formulário de contato. 
 
 React, Styled Components, EmailJs.
 </p>

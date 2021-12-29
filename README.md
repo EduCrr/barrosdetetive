@@ -1,10 +1,9 @@
-<p align="center">
+<div align="center">
 http://barrosdetetive.com.br/
 
 Um site institucional para especificar seus serviços prestados. O objetivo do cliente era criar um site intuitivo de página única com formulário de contato. 
-
 React, Styled Components, EmailJs.
-</p>
+</div>
 <br/>
 
 <div align="center">
